@@ -95,13 +95,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun diceResultBeforeAndAfter(dice: Dice, i: Int) {
         dice.roll();
+        //Roll first dice
         var sideUpAfterRoll: Int = dice.getSideUp()
         if (sideUpAfterRoll == 0)
         {
             sideUpAfterRoll = sideUpAfterRoll+1;
         }
         tvRollOneText!!.text = sideUpAfterRoll.toString()
+        //if user clicked on two time roll
         if (i == 2) {
+
             var getSide = dice.getSides();
             val roundRandom = Math.round(Math.random() * 10).toInt()
 
