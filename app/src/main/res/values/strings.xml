@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">Dice Rolling</string>
-    <string name="night_mode">Night Mode</string>
-    <string name="roll_once">Roll Once</string>
+    <string name="roll_once">One time Roll</string>
     <string name="dice_one">Dice One</string>
     <string name="dice_two">Dice Two</string>
-    <string name="history_of_dice">History of Dice:-</string>
+    <string name="history_of_dice">History:-</string>
     <string name="dice_rolling">Dice Rolling</string>
-    <string name="powerd_by_rushabh_shah">Powerd By Ayush Patel</string>
 </resources>
