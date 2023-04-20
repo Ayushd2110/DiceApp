@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--MATERIAL DESIGN USED-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lvMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="3">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/dice_one"
+                    style="@style/stTextViewLabel"></TextView>
+
+                <TextView
+                    android:id="@+id/tvRollOneText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    style="@style/stTextViewLabel"></TextView>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#FF0000FF" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/dice_two"
+                    style="@style/stTextViewLabel"></TextView>
+
+                <TextView
+                    android:id="@+id/tvRollTwoText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    style="@style/stTextViewLabel"></TextView>
+
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <Spinner
+                android:id="@+id/spChooseSide"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="5dp"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:id="@+id/btRollOnce"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="@string/roll_once"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:iconGravity="textStart"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:id="@+id/btRollTwice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:text="Roll Twice"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:iconGravity="textStart"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <!--MATERIAL EDITTEXT -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:hint="Enter Dice Number"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="0.7"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edCustomDiceSide"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--MATERIAL BUTTON -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btAdd"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:iconGravity="textStart"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history_of_dice"
+            style="@style/stTextViewLabel"></TextView>
+        <ListView
+            android:id="@+id/lvSavedList"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>
